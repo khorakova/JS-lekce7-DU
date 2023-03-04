@@ -24,3 +24,30 @@ function calculate (number1, operation, number2) {
         return number1 * number2
     }
 }
+
+// volitelny ukol 1 
+function fillcut (str, len) {
+    let stringLength = str.length;
+    if (stringLength > len) {
+       return str.slice(0, len)
+    } else if (stringLength < len) {
+        return str.padStart(len, ".")
+    } else {
+        return str
+    }
+}
+
+// volitelny ukol 2
+function isLeapYear(year) {
+    if (year % 4 === 0 && year % 100 === 0) {
+      if (year % 400 === 0) {
+        return true
+      } else {
+        return false
+      }
+    } else if (year % 4 === 0) {
+      return true
+    } else {
+      return false
+    }
+}
